@@ -1,148 +1,92 @@
 # 🧠 Mental Health Prediction System
 
-A machine learning–based web application that predicts a student's **mental health impact level** using social media usage and lifestyle-related information.
+A machine learning web application that predicts a student's **mental health impact level** based on social media usage and lifestyle-related information.
 
-The project includes a trained Machine Learning model, a **FastAPI backend**, and an interactive **HTML/CSS/JavaScript frontend**.
+Built with **Python, Scikit-learn, FastAPI, HTML, CSS, and JavaScript**.
 
----
+## 📌 Features
 
-## 📌 Project Overview
-
-Social media usage can have an impact on students' mental well-being. This project uses machine learning to analyze different student-related factors and predict the corresponding mental health impact.
-
-The system provides:
-
-* 🧠 Machine Learning–based prediction
-* ⚡ FastAPI REST API backend
-* 🌐 Interactive web frontend
-* 📊 Trained `.pkl` model
-* ✅ Input validation using Pydantic
-* 🔗 Frontend and backend integration
-* 📓 Jupyter Notebook containing the ML workflow
-
----
+* 🧠 Machine Learning prediction
+* ⚡ FastAPI REST API
+* 🌐 Interactive frontend
+* ✅ Pydantic input validation
+* 📦 Trained `.pkl` model
+* 📓 Jupyter Notebook for ML workflow
+* 🔗 Frontend–backend integration
 
 ## 🏗️ Project Structure
 
 ```text
-ML Project/
+Mental-Health-Score-Predictor/
 │
 ├── .gitignore
-├── ML Project.html
-├── Mental_Health_Model.pkl
 ├── README.md
-├── Student Social Media And Mental Health Impact...
-├── index.html
-├── main.py
-├── ml_project.ipynb
 ├── requirements.txt
+├── main.py
+├── index.html
+├── style.css
 ├── script.js
-└── style.css
-
-
-# 🚀 Getting Started
-
-## 1. Clone the Repository
-
-Clone the GitHub repository to your local computer:
-
-```bash
-git clone https://github.com/Nitinvariya28/Mental-Health-Score-Predictor
+├── Mental_Health_Model.pkl
+├── ml_project.ipynb
+└── Student Social Media And Mental Health Impact.csv
 ```
 
-Then move into the project directory:
+## 🚀 Installation
+
+### 1. Clone the Repository
 
 ```bash
-cd "ML Project"
+git clone https://github.com/Nitinvariya28/Mental-Health-Score-Predictor.git
+cd Mental-Health-Score-Predictor
 ```
 
----
+### 2. Create Virtual Environment
 
-## 2. Create a Virtual Environment
-
-It is recommended to use a virtual environment.
-
-### Windows
+**Windows PowerShell:**
 
 ```powershell
 python -m venv venv
-```
-
-Activate the environment:
-
-```powershell
 venv\Scripts\activate
 ```
 
-After activation, your terminal should look similar to:
-
-```text
-(venv) PS C:\...\ML Project>
-```
-
----
-
-## 3. Install Dependencies
-
-Upgrade pip:
+### 3. Install Dependencies
 
 ```powershell
 python -m pip install --upgrade pip
-```
-
-Install all required packages:
-
-```powershell
 pip install -r requirements.txt
 ```
 
----
+## ▶️ Run the Backend
 
-# ▶️ Run the Backend
-
-The backend is implemented using **FastAPI**.
-
-Start the development server:
+Start the FastAPI server:
 
 ```powershell
 uvicorn main:app --reload
 ```
 
-The API will normally be available at:
+API:
 
 ```text
 http://127.0.0.1:8000
 ```
 
----
+### 📚 API Documentation
 
-## 📚 API Documentation
-
-FastAPI automatically provides interactive API documentation.
-
-### Swagger UI
-
-Open:
+Swagger UI:
 
 ```text
 http://127.0.0.1:8000/docs
 ```
 
-### ReDoc
-
-Open:
+ReDoc:
 
 ```text
 http://127.0.0.1:8000/redoc
 ```
 
-Swagger UI can be used to test the prediction API directly from the browser.
+## 🌐 Run the Frontend
 
----
-
-# 🌐 Run the Frontend
-
-The frontend consists of:
+The frontend contains:
 
 ```text
 index.html
@@ -150,52 +94,31 @@ style.css
 script.js
 ```
 
-The JavaScript sends the user's input to the FastAPI backend and receives the machine learning prediction.
+Open `index.html` using **VS Code Live Server** or another local web server.
 
-You can open the frontend using a local development server such as **VS Code Live Server**.
+Make sure the FastAPI backend is running before making predictions.
 
-Make sure the FastAPI backend is running before submitting a prediction.
-
----
-
-# 🔄 Application Workflow
+## 🔄 Workflow
 
 ```text
 User
- │
- ▼
+  ↓
 Frontend
- │
- │ Student Information
- ▼
+  ↓
 JavaScript
- │
- │ HTTP Request
- ▼
-FastAPI Backend
- │
- ▼
-Input Validation
- │
- ▼
-Machine Learning Model
- │
- ▼
+  ↓
+FastAPI API
+  ↓
+Pydantic Validation
+  ↓
+ML Model
+  ↓
 Prediction
- │
- ▼
-FastAPI Response
- │
- ▼
-JavaScript
- │
- ▼
-Prediction Displayed to User
+  ↓
+Frontend Result
 ```
 
----
-
-# 🤖 Machine Learning Model
+## 🤖 Machine Learning
 
 The trained model is stored in:
 
@@ -203,84 +126,27 @@ The trained model is stored in:
 Mental_Health_Model.pkl
 ```
 
-The model is loaded by the FastAPI backend and used to generate predictions based on the input provided by the user.
-
-The machine learning workflow is documented in:
+The complete ML workflow is available in:
 
 ```text
 ml_project.ipynb
 ```
 
-The notebook contains the development process used for the machine learning project, including data processing, model training, evaluation, and model saving.
+The notebook covers data preprocessing, model training, evaluation, and model saving.
 
----
+## 🛠️ Technologies
 
-# 📊 Dataset
+**Backend:** Python, FastAPI, Pydantic, Uvicorn
 
-The project uses a student social-media and mental-health-related dataset:
+**Machine Learning:** Scikit-learn, Pandas, NumPy, Joblib
 
-```text
-Student Social Media And Mental Health Impact...
-```
+**Frontend:** HTML5, CSS3, JavaScript
 
-The dataset contains student-related information that can be used to study relationships between social media usage and mental health impact.
+**Tools:** Jupyter Notebook, VS Code, Git, GitHub
 
----
+## 🔐 .gitignore
 
-# 🛠️ Technologies Used
-
-### Backend
-
-* Python
-* FastAPI
-* Pydantic
-* Uvicorn
-
-### Machine Learning
-
-* Scikit-learn
-* Pandas
-* NumPy
-* Joblib
-
-### Frontend
-
-* HTML5
-* CSS3
-* JavaScript
-
-### Development
-
-* Jupyter Notebook
-* VS Code
-* Git
-* GitHub
-
----
-
-# 📦 Requirements
-
-All required Python dependencies are listed in:
-
-```text
-requirements.txt
-```
-
-Install them using:
-
-```powershell
-pip install -r requirements.txt
-```
-
----
-
-# 🔐 Environment
-
-The project uses a Python virtual environment.
-
-The virtual environment should **not** be committed to GitHub.
-
-Add the following to `.gitignore`:
+Do not upload the virtual environment or Python cache files.
 
 ```text
 venv/
@@ -288,65 +154,28 @@ __pycache__/
 *.pyc
 ```
 
----
+## ⚠️ Disclaimer
 
-# 🧪 Testing the API
+This project is created for **educational and demonstration purposes only**. Predictions should not be considered a medical diagnosis or a replacement for professional mental-health assessment.
 
-After starting the FastAPI server:
+## 🔮 Future Improvements
 
-```powershell
-uvicorn main:app --reload
-```
+* User authentication
+* Prediction history
+* Database integration
+* Dashboard and visualizations
+* Model performance monitoring
+* Cloud deployment
+* Improved mobile responsiveness
 
-Open:
-
-```text
-http://127.0.0.1:8000/docs
-```
-
-Use the Swagger interface to:
-
-1. Open the prediction endpoint.
-2. Click **Try it out**.
-3. Enter the required student information.
-4. Click **Execute**.
-5. Check the prediction returned by the model.
-
----
-
-# ⚠️ Disclaimer
-
-This project is intended for **educational and demonstration purposes**.
-
-The prediction produced by this machine learning model should **not** be considered a medical diagnosis or a substitute for professional mental-health assessment.
-
----
-
-# 🔮 Future Improvements
-
-* Add user authentication
-* Store prediction history
-* Add visualization dashboards
-* Improve model accuracy
-* Add multiple machine learning models
-* Deploy the FastAPI backend to a cloud platform
-* Deploy the frontend separately
-* Add database integration
-* Add model performance monitoring
-* Improve mobile responsiveness
-
----
-
-# 👨‍💻 Author
+## 👨‍💻 Author
 
 **Nitin Variya**
 
-Machine Learning / Deep Learning Project
+Machine Learning / Deep Learning Developer
 
 GitHub: **Nitinvariya28**
 
----
-
 ## ⭐ Project Goal
 
-The main goal of this project is to demonstrate how a trained machine learning model can be integrated with a modern web application using **FastAPI, HTML, CSS, and JavaScript** to provide real-time predictions.
+To demonstrate the integration of a **Machine Learning model with FastAPI and a modern web frontend** for real-time prediction.
