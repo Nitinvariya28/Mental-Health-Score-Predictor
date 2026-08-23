@@ -1,0 +1,17 @@
+# Environments
+venv/
+env/
+.env
+__pycache__/
+*.pyc
+
+# IDEs
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Large datasets (optional, uncomment if dataset is >100MB)
+# *.csv
+# *.pkl
